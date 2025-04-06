@@ -9,6 +9,8 @@ Amigo Me Invitó A Comer”.
 letra del texto en mayúscula. Además, se espera que se resuelva con algún ciclo (exacto
 o inexacto) y utilizando la función anteriormente mencionada.*/
 
+console.log("Ejercicio 1");
+
 var oracion = "mi amigo me invitó a comer";
 
 function capitalizar(oracion){
@@ -19,11 +21,10 @@ function capitalizar(oracion){
         const restoDeLaPalabra = palabras[i].slice(1).toLowerCase();
         fraseFinal += primeraLetra + restoDeLaPalabra + " ";
     }
-    console.log(fraseFinal);
+    console.log(fraseFinal + "\n");
 }
 
 capitalizar(oracion);
-
 
 
 /*2. Concatenar elementos de un array con un separador personalizado:
@@ -34,6 +35,7 @@ texto que contenga todos los elementos del array concatenados con el separador e
 ● Ejemplo: Si la entrada es ["Hola", "Mundo", "JavaScript"] y el separador “-”, la
 salida debería ser "Hola-Mundo-JavaScript"*/
 
+console.log("Ejercicio 2");
 
 let entrada = ["Hola", "Mundo", "Javascript"];
 let separador = "-";
@@ -42,7 +44,7 @@ function concatenar(entrada, separador){
     return entrada.join(separador)
 }
 
-console.log(concatenar(entrada, separador));
+console.log(concatenar(entrada, separador) + "\n");
 
 
 
@@ -57,6 +59,8 @@ JavaScript”
 encuentre un espacio en blanco se habrá encontrado una palabra. Cada palabra podría
 ser insertada en un array (¿para qué?)*/
 
+console.log("Ejercicio 3");
+
 let frase = "Javascript es divertido";
 
 function invertir(entrada){
@@ -64,7 +68,7 @@ function invertir(entrada){
     return array.join(" ");
 }
 
-console.log(invertir(frase));
+console.log(invertir(frase) + "\n");
 
 
 
@@ -78,6 +82,8 @@ quiere buscar es “el”, la salida debería ser el número 2.
 ● Ayuda: Se sugiere recorrer la frase con algún ciclo de repetición. Cada vez que se
 encuentre un espacio en blanco se habrá encontrado una palabra. Cuando se tenga una
 palabra, se la podrá comparar con la palabra buscada y si coincide … (siga usted!)*/
+
+console.log("Ejercicio 4");
 
 let cadena = "El sol brilla y el cielo está despejado";
 let palabra = "el";
@@ -98,7 +104,7 @@ function capitalizarPalabra(palabra){
     return palabra.charAt(0).toUpperCase() + palabra.slice(1).toLowerCase()
 }
 
-console.log(buscarPalabra(cadena, palabra));
+console.log(buscarPalabra(cadena, palabra) + "\n");
 
 
 
@@ -111,6 +117,8 @@ termina con ese sufijo, false en caso contrario.
 saber si termina con “ción”, debería devolver true.
 ● Ayuda: Se espera que el ejercicio se resuelva con ciclos inexactos.*/
 
+
+console.log("Ejercicio 5");
 
 let input = "Javascript es un lenguaje de programacion";
 let sufijo = "cion";
@@ -130,7 +138,7 @@ function buscarSufijo(entrada, sufijo){
     return false
 }
 
-console.log(buscarSufijo(input, sufijo));
+console.log(buscarSufijo(input, sufijo) + "\n");
 
 
 
@@ -145,6 +153,8 @@ es divertido".
 se encuentre un caracter no “vacío” (espacio) se lo considere para la nueva palabra “sin
 espacios”. Si se le busca la vuelta, se puede reutilizar la función del punto 2.*/
 
+
+console.log("Ejercicio 6");
 
 let ejemplo = "      JavaScript es divertido      ";
 
@@ -162,7 +172,7 @@ function borrarEspacio(ejemplo){
 ;   return array.join("")
 }
 
-console.log(borrarEspacio(ejemplo));
+console.log(borrarEspacio(ejemplo) + "\n");
 
 
 
@@ -172,6 +182,8 @@ Crear una función que reciba una dirección de correo electrónico y devuelva �
 dominio de la misma.
 
 ● Ejemplo: Si la entrada es “jhondoe@ahk.com.ar”, la salida debería ser “ahk.com.ar”*/
+
+console.log("Ejercicio 7");
 
 let correo = "jhondoe@ahk.com.ar";
 
@@ -185,7 +197,7 @@ function dominio(correo){
     return array.join("")
 }
 
-console.log(dominio(correo));
+console.log(dominio(correo) + "\n");
 
 
 
@@ -197,6 +209,8 @@ arrays combinados alternativamente.
 ● Ejemplo: Si la entrada fueran los arrays [1, 2, 3] y ['a', 'b', 'c', ‘d’], la salida debería ser [1,
 ‘a’, 2, ‘b’, 3, ‘c’, ‘d’]*/
 
+
+console.log("Ejercicio 8");
 
 let array1 = [1, 2, 3];
 let array2 = ["a", "b", "c", "d"];
@@ -221,7 +235,8 @@ function ordenarArrays(array1, array2){
     let array = [array1, array2];
     return array.sort((a, b) => array1.length - array2.length)
 }
-console.log(combinarArrays(array1, array2));
+
+console.log(combinarArrays(array1, array2) + "\n");
 
 
 
@@ -235,6 +250,7 @@ todo el resto un 40%. Los menores de edad no abonan impuestos.
 ● Ejemplo: Si la entrada fuera la edad 18 e ingreso 1000, la salida esperada debería ser
 100.*/
 
+console.log("Ejercicio 9");
 
 let edad = 18;
 let ingresos = 1000;
@@ -262,7 +278,7 @@ function calcularTasa(edad){
     return 40
 }
 
-console.log(calcularImpuestos(edad, ingresos));
+console.log(calcularImpuestos(edad, ingresos) + "\n");
 
 
 
@@ -273,6 +289,8 @@ de la cantidad de likes en formato de “K” para miles y “M” para millones
 
 ● Ejemplo: Si la entrada fuera 1400, la salida debería ser “1.4K”; o si la entrada fuera “34
 567” la salida debería ser “34.5K”.*/
+
+console.log("Ejercicio 10");
 
 let likes = 34567;
 
@@ -305,4 +323,4 @@ function determinarRango(likes){
     
 }
 
-console.log(formatoAlfanumerico(likes));
+console.log(formatoAlfanumerico(likes) + "\n");
