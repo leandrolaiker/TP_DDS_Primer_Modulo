@@ -227,7 +227,10 @@ function combinarArrays(array1, array2){
         arrayMayor.shift();
     }
 
-    return arrayCombinado + arrayMayor.join("")
+    arrayCombinado += arrayMayor;
+
+    console.log(arrayCombinado.split(""));
+    console.log("\n");
 
 }
 
@@ -236,7 +239,7 @@ function ordenarArrays(array1, array2){
     return array.sort((a, b) => array1.length - array2.length)
 }
 
-console.log(combinarArrays(array1, array2) + "\n");
+combinarArrays(array1, array2);
 
 
 
